@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import '@unocss/reset/normalize.css';
+
 useSeoMeta({
   title: 'NuxtHub Starter',
   description: 'A Nuxt template to build your full-stack application on the edge.'
 })
+
 </script>
 
 <template>

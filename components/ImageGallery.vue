@@ -19,22 +19,16 @@ async function deleteImage (pathname: string) {
 
 <template>
   <div>
-    <h3>Images</h3>
+    <h3 class="hover:bg-gray-400 hover:font-medium font-light font-mono">Images</h3>
     <form @submit.prevent="uploadImage">
-      <label>Upload an image: <input type="file" name="image"></label>
+      <label class="text-red-400">Upload an image: <input type="file" name="image"></label>
       <button type="submit">
         Upload
       </button>
     </form>
     <p>
-      <img
-        v-for="image of images"
-        :key="image.pathname"
-        width="200"
-        :src="`/images/${image.pathname}`"
-        :alt="image.pathname"
-        @dblclick="deleteImage(image.pathname)"
-      >
+      <img v-for="image of images" :key="image.pathname" width="200" :src="`/images/${image.pathname}`"
+        :alt="image.pathname" @dblclick="deleteImage(image.pathname)">
     </p>
     <p v-if="images?.length">
       <i>Tip: delete an image by double-clicking on it.</i>
