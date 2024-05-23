@@ -2,12 +2,14 @@
 import '@unocss/reset/normalize.css';
 
 useSeoMeta({
-  title: 'NuxtHub Starter',
-  description: 'A Nuxt template to build your full-stack application on the edge.'
+  title: 'Free eBooks',
+  description: 'More than 1000 free eBooks for you to read and download',
 })
 
 </script>
 
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
