@@ -1,14 +1,11 @@
-export default eventHandler(async () => {
-  const db = hubDatabase();
+import type { IQuery } from "~/types/common";
 
-  // TODO: move it a a Server Task
-  await db.exec(
-    "CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY, text TEXT, created_at INTEGER)"
-  );
-
-  const { results } = await db
-    .prepare("SELECT * FROM messages ORDER BY created_at DESC")
-    .all();
-
-  return results;
+export default eventHandler(async (event) => {
+  const query: IQuery = await getQuery(event);
+  const { page = 1, limit = 6 } = query;
+  const res = await useDrizzle().query.books.findMany({
+    limit: limit,
+    offset: (page - 1) * limit,
+  });
+  return res;
 });

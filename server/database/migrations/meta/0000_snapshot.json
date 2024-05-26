@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "7de4b9d5-45b2-47da-894c-4776715e83d8",
+  "id": "0483adb9-7071-4c78-bbb9-31665955f571",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "books": {
@@ -19,40 +19,19 @@
           "type": "text(10)",
           "primaryKey": false,
           "notNull": false,
-          "autoincrement": false
+          "autoincrement": false,
+          "default": "''"
         },
         "isbn13": {
           "name": "isbn13",
           "type": "text(13)",
           "primaryKey": false,
           "notNull": false,
-          "autoincrement": false
+          "autoincrement": false,
+          "default": "''"
         },
         "title": {
           "name": "title",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "origin_title": {
-          "name": "origin_title",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "alt_title": {
-          "name": "alt_title",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "subtitle": {
-          "name": "subtitle",
           "type": "text(255)",
           "primaryKey": false,
           "notNull": false,
@@ -67,21 +46,13 @@
           "autoincrement": false,
           "default": "''"
         },
-        "alt": {
-          "name": "alt",
-          "type": "text(255)",
+        "downloadUrls": {
+          "name": "downloadUrls",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "''"
-        },
-        "image": {
-          "name": "image",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
+          "default": "'[]'"
         },
         "images": {
           "name": "images",
@@ -89,7 +60,7 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "'{}'"
+          "default": "'{\"small\":\"\",\"large\":\"\",\"medium\":\"\"}'"
         },
         "author": {
           "name": "author",
@@ -107,20 +78,6 @@
           "autoincrement": false,
           "default": "'[]'"
         },
-        "publisher": {
-          "name": "publisher",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "pubdate": {
-          "name": "pubdate",
-          "type": "text(10)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
         "rating": {
           "name": "rating",
           "type": "text",
@@ -137,76 +94,13 @@
           "autoincrement": false,
           "default": "'[]'"
         },
-        "binding": {
-          "name": "binding",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "price": {
-          "name": "price",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "series": {
-          "name": "series",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "pages": {
-          "name": "pages",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "author_intro": {
-          "name": "author_intro",
+        "similar_books": {
+          "name": "similar_books",
           "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "''"
-        },
-        "summary": {
-          "name": "summary",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "catalog": {
-          "name": "catalog",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "ebook_url": {
-          "name": "ebook_url",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "ebook_price": {
-          "name": "ebook_price",
-          "type": "text(255)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
+          "default": "'[]'"
         }
       },
       "indexes": {},
