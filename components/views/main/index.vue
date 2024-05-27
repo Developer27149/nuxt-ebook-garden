@@ -4,7 +4,7 @@
       <div
         v-for="book in data"
         :key="book.id"
-        class="group w-[400px] flex flex-col border border-green-200/50 rounded-sm border-solid transition-colors hover:border-green-400"
+        class="group w-[360px] flex flex-col border border-green-200/50 rounded-sm border-solid transition-colors lg:w-[400px] md:w-[280px] hover:border-green-400"
       >
      
         <div class="h-[220px] overflow-hidden">
